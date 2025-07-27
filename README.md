@@ -54,8 +54,8 @@ Ejemplo de log con rotación de IPs y fallos:
 
 ## Salida del scraper
 
-Se genera un archivo `output.csv` con los siguientes campos:
-`id`, `titulo`, `anio`, `calificacion`, `duracion`, `metascore`, `actores`.
+Se generó un archivo `output.csv` con los siguientes campos:
+`id`, `titulo`, `anio`, `calificacion`, `duracion`, `metascore` y `actores`.
 
 Los actores se listan como una cadena separada por comas.
 Tambien está presente el archivo `query.sql` con las queries para la creación de las tablas.
