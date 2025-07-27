@@ -5,7 +5,6 @@ _distutils_hack
 venv/
 env/
 
-*.csv
 
 
 .vscode/

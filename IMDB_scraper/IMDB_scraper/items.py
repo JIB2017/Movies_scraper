@@ -7,7 +7,7 @@ from scrapy import Item, Field
 from itemloaders.processors import MapCompose, TakeFirst, Join
 import re
 
-# 2H 45M
+
 def clean_duration(duration):
     match = re.search(r'(\d+)h\s*(\d+)?',duration)
     if match:
@@ -17,8 +17,7 @@ def clean_duration(duration):
 
 
 class MovieItem(Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+
     id = Field(
         output_processor=TakeFirst()
     )

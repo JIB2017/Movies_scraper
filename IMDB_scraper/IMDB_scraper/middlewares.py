@@ -68,6 +68,9 @@ class ImdbScraperDownloaderMiddleware:
     def process_request(self, request, spider):
         # Called for each request that goes through the downloader
         # middleware.
+        proxy = request.meta.get("proxy")
+        retry_count = request.meta.get("retry_times", 0)
+        spider.logger.info(f'Request to {request.url} with IP: {proxy} | Retry: #{retry_count}')
 
         # Must either:
         # - return None: continue processing this request
