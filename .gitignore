@@ -1,0 +1,12 @@
+
+__pycache__/
+_distutils_hack
+.venv/
+venv/
+env/
+
+*.csv
+
+
+.vscode/
+
