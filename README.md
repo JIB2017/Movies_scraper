@@ -49,6 +49,7 @@ Los proxies fallidos se loguean con su IP y número de intento.
 Si un proxy falla, se reintenta con otro.
 Ejemplo de log con rotación de IPs y fallos:
   
+<img width="1540" height="587" alt="image" src="https://github.com/user-attachments/assets/0fce7364-f1c6-47ea-be90-c7765c552a6d" />
 
 
 
