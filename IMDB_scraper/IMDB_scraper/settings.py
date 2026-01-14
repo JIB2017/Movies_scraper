@@ -7,6 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+import os
+
+POSTGRES_HOST = os.getenv('POSTGRES_HOST', 'localhost')
+POSTGRES_DB = os.getenv('POSTGRES_DB', 'imdb_db')
+POSTGRES_USER = os.getenv('POSTGRES_USER', 'postgres')
+POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'secret')
+POSTGRES_PORT = os.getenv('POSTGRES_PORT', '5432')
+
 BOT_NAME = "IMDB_scraper"
 
 SPIDER_MODULES = ["IMDB_scraper.spiders"]
@@ -44,7 +52,7 @@ DEFAULT_REQUEST_HEADERS = {
    "Sec-Fetch-Mode": "navigate",
    "Sec-Fetch-Site": "none",
    "Sec-Fetch-User": "?1",
-   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0",
+   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0",
 }
 
 # Enable or disable spider middlewares
@@ -69,9 +77,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "IMDB_scraper.pipelines.ImdbScraperPipeline": 300,
-#}
+ITEM_PIPELINES = {
+   "IMDB_scraper.pipelines.PostgresPipeline": 300,
+}
 
 ROTATING_PROXY_LIST = [
     'http://141.101.113.69:80',
