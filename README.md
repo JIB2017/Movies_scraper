@@ -49,13 +49,14 @@ Los proxies fallidos se loguean con su IP y número de intento.
 Si un proxy falla, se reintenta con otro.
 Ejemplo de log con rotación de IPs y fallos:
   
+<img width="1540" height="587" alt="image" src="https://github.com/user-attachments/assets/0fce7364-f1c6-47ea-be90-c7765c552a6d" />
 
 
 
 ## Salida del scraper
 
-Se genera un archivo `output.csv` con los siguientes campos:
-`id`, `titulo`, `anio`, `calificacion`, `duracion`, `metascore`, `actores`.
+Se generó un archivo `output.csv` con los siguientes campos:
+`id`, `titulo`, `anio`, `calificacion`, `duracion`, `metascore` y `actores`.
 
 Los actores se listan como una cadena separada por comas.
 Tambien está presente el archivo `query.sql` con las queries para la creación de las tablas.
