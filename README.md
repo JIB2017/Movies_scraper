@@ -6,8 +6,6 @@ The project extract data of top movies from IMDB and then save it to a PostgreSQ
 
 My main goal of this project is to build a scraping workflow solution that can be scheduled and monitored in production.
 
----
-
 The scraper does the following:
 
 Crawls the top ranked. Follows the links to each movie’s detail page and extracts additional attributes such as rating, duration, metascore, and main actors. Normalizes it and stores the data in PostgreSQL.
