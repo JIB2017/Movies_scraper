@@ -4,7 +4,7 @@ _distutils_hack
 .venv/
 venv/
 env/
-
+.env
 
 
 .vscode/
