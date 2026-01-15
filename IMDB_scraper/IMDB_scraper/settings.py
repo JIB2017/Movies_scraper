@@ -9,9 +9,9 @@
 
 import os
 
-POSTGRES_HOST = os.getenv('POSTGRES_HOST', 'localhost')
+POSTGRES_HOST = os.getenv('POSTGRES_HOST', 'db')
 POSTGRES_DB = os.getenv('POSTGRES_DB', 'imdb_db')
-POSTGRES_USER = os.getenv('POSTGRES_USER', 'postgres')
+POSTGRES_USER = os.getenv('POSTGRES_USER', 'jib17_a')
 POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD', 'secret')
 POSTGRES_PORT = os.getenv('POSTGRES_PORT', '5432')
 
@@ -64,7 +64,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-   "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
+   # "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
    "rotating_proxies.middlewares.BanDetectionMiddleware": 620,
    "IMDB_scraper.middlewares.ImdbScraperDownloaderMiddleware": 541
 }
@@ -81,28 +81,28 @@ ITEM_PIPELINES = {
    "IMDB_scraper.pipelines.PostgresPipeline": 300,
 }
 
-ROTATING_PROXY_LIST = [
-    'http://141.101.113.69:80',
-    'http://45.67.215.0:80',
-    'http://141.101.120.101:80',
-    'http://45.67.215.118:80',
-    'http://89.116.250.35:80',
-    'http://185.238.228.173:80',
-    'http://89.116.250.153:80',
-    'http://185.238.228.108:80',
-    'http://170.114.46.185:80',
-    'http://91.193.58.165:80',
-    'http://45.67.215.13:80',
-    'http://216.205.52.72:80',
-    'http://102.177.176.148:80',
-    'http://45.67.215.129:80',
-    'http://141.101.120.194:80',
-    'http://216.205.52.75:80',
-    'http://89.116.250.20:80',
-    'http://216.205.52.67:80',
-    'http://170.114.45.147:80',
-    'http://45.67.215.173:80',
-]
+# ROTATING_PROXY_LIST = [
+#     'http://141.101.113.69:80',
+#     'http://45.67.215.0:80',
+#     'http://141.101.120.101:80',
+#     'http://45.67.215.118:80',
+#     'http://89.116.250.35:80',
+#     'http://185.238.228.173:80',
+#     'http://89.116.250.153:80',
+#     'http://185.238.228.108:80',
+#     'http://170.114.46.185:80',
+#     'http://91.193.58.165:80',
+#     'http://45.67.215.13:80',
+#     'http://216.205.52.72:80',
+#     'http://102.177.176.148:80',
+#     'http://45.67.215.129:80',
+#     'http://141.101.120.194:80',
+#     'http://216.205.52.75:80',
+#     'http://89.116.250.20:80',
+#     'http://216.205.52.67:80',
+#     'http://170.114.45.147:80',
+#     'http://45.67.215.173:80',
+# ]
 
 RETRY_ENABLED = True
 RETRY_TIMES = 5
